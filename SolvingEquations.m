@@ -2,8 +2,14 @@
 
 %Matlab graphs
 
+a= input ( ' Input the constant a : ' ) ; 
+b= input ( ' Input the constant b : ' ) ; 
+c= input ( ' Input the constant c : ') ;
+d= input ( ' Input the constant d : ') ;
+e= input ( ' Input the constant e : ') ;
+
 %Define the function for y
-y=@(x)0.1*x.^4-0.5*x.^3+2*x-1
+y=@(x)a*x.^4+b*x.^3+c*x.^2+d*x+e
 
 %Create the vector x
 x=linspace(-10,10,100);
@@ -13,15 +19,4 @@ yy=y(x);
 
 %Plot the x and yy
 plot(x,yy);
-
-%Zoom in and activate the grid
-axis([-3 5 -3.5 2])
 grid on
-
-%Define functions for the right and left side
-v=@(x)0.1*x.^4-0.5*x.^3
-h=@(x)-2*x+1
-
-%Compare v with h for x1
-v(-1.919)
-h(-1.919)
